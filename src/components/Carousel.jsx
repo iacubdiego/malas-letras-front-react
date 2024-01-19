@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import banner from './banner-2.png'
+import banner from '../images/banner-2.png'
 
  const PrevArrow = (props) => (
    <button {...props} className="slick-arrow  slick-prev text-red-500">

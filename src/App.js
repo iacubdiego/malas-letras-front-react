@@ -6,17 +6,17 @@ import Header from './components/Header';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 import Galeria from './components/Galeria';
-
+import SearchBook from './components/SearchBook';
 
 function App() {
   return (
-    <div>
+    <div>  
       {/* Header */}
       <Header />    
       {/* Carousel */}
       <Carousel />
-      {/* Galeria */}
-      <Galeria />
+      {/* SearchBook */}
+      <SearchBook />
       {/* Footer */}
       <Footer />
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './Logo-Malas-Letras.png'
+import logo from '../images/Logo-fondo-blanco-malas-letras.png'
 import SocialButon from './SocialButon/SocialButon';
 
 const Footer = () => {
