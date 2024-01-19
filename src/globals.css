@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* 'paleta': {
+const colors = {
+  primary: '#26cfb1',
+  complementary: '#b12683',
+  secondary1: '#2684cf',
+  secondary2: '#cf2626',
+  secondary3: '#26cfc3',
+};
+
+  '50': '#f2fdfa',
+  '100': '#cafcef',
+  '200': '#96f8df',
+  '300': '#5aedcd',
+  '400': '#26cfb0',
+  '500': '#10bc9f',
+  '600': '#0a9984',
+  '700': '#0d7769',
+  '800': '#0f6157',
+  '900': '#124f48',
+  '950': '#03302d',
+}, */
+
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* .banner__background {
+  background-image: url('/images/banner-2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
