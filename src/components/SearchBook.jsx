@@ -58,13 +58,13 @@ const products = [
     description: 'Keysight offers the widest selection of baseband, RF, and microwave signal generator products from baseband to 67 GHz.',
     brand: 'Keysight',
   },
-  {
-    id: 7,
-    image: tapa_mariposas,
-    title: 'Mariposas',
-    description: 'Keysight offers the widest selection of baseband, RF, and microwave signal generator products from baseband to 67 GHz.',
-    brand: 'Keysight',
-  },
+  // {
+  //   id: 7,
+  //   image: tapa_mariposas,
+  //   title: 'Mariposas',
+  //   description: 'Keysight offers the widest selection of baseband, RF, and microwave signal generator products from baseband to 67 GHz.',
+  //   brand: 'Keysight',
+  // },
   // Agrega más productos aquí
 ];
 

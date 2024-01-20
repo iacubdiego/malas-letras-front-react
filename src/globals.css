@@ -9,7 +9,12 @@ const colors = {
   complementary: '#b12683',
   secondary1: '#2684cf',
   secondary2: '#cf2626',
-  secondary3: '#26cfc3',
+  secundary3: ´#E0A768,
+  secundary4: ´#14CCAA,
+  secundary5: ´#169292,
+  secundary6: ´#E6EBF1,
+  secundary7: ´#010101,
+
 };
 
   '50': '#f2fdfa',
@@ -25,33 +30,8 @@ const colors = {
   '950': '#03302d',
 }, */
 
-
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-image: url('../public/Background_Moon.svg');
+  background-size: fill;
+  background-repeat: repeat;
 }
-
-/* .banner__background {
-  background-image: url('/images/banner-2.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-} */

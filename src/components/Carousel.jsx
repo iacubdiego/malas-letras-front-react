@@ -4,7 +4,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import banner from '../images/banner-2.png'
+import banner1 from '../images/banner1.png'
+import banner2 from '../images/banner2.png'
+import banner3 from '../images/banner3.png'
 
  const PrevArrow = (props) => (
    <button {...props} className="slick-arrow  slick-prev text-red-500">
@@ -40,21 +42,21 @@ const Carousel = () => {
     <Slider {...settings}>
       <div>
       <img
-        className="object-cover h-80 w-full md:rounded-l-lg"
-        src={banner}
+        className="object-fill h-80 w-full md:rounded-l-lg"
+        src={banner1}
         alt="Imagen"
       />      
       </div>
       <div>
       <img
-        className="object-cover h-80 w-full md:rounded-l-lg"
-        src={banner}
+        className="object-fill h-80 w-full md:rounded-l-lg"
+        src={banner2}
         alt="Imagen"
       />      </div>
       <div>
       <img
-        className="object-cover h-80 w-full md:rounded-l-lg"
-        src={banner}
+        className="object-fill h-80 w-full md:rounded-l-lg"
+        src={banner3}
         alt="Imagen"
       />      </div>
     </Slider>

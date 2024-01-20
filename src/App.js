@@ -5,7 +5,7 @@ import './globals.css';
 import Header from './components/Header';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
-import Galeria from './components/Galeria';
+import Blog from './components/Blog';
 import SearchBook from './components/SearchBook';
 
 function App() {
@@ -17,6 +17,8 @@ function App() {
       <Carousel />
       {/* SearchBook */}
       <SearchBook />
+      {/* Blog */}
+      <Blog />
       {/* Footer */}
       <Footer />
     </div>
