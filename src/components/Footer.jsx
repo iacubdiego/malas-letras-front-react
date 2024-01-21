@@ -3,14 +3,11 @@ import logo from '../images/Logo-fondo-blanco-malas-letras.png'
 import SocialButon from './SocialButon/SocialButon';
 
 const Footer = () => {
-  return (
-    // class="flex items-center justify-between p-4 bg-gray-100 border-2 w-full m-auto bg-gray-100"
-<footer className="flex flex-col mt-4 p-2 border-2 w-full m-auto">
-{/* <div className="container mt-4 py-8"> */}
-<div className="flex items-center justify-between mt-4 bg-gray-100 w-full m-auto">
+return (
 
-  <div className="flex flex-wrap w-full justify-between">
-    <div className="w-full flex p-2 sm:w-1/2 md:w-1/3 lg:w-1/4">
+<footer className="flex flex-col mt-4 p-2 bg-gray-100 border-2 w-full m-auto">
+<div className="flex items-center justify-between  w-full m-auto">
+  <div className="flex flex-wrap items-center w-full justify-evenly">
       <img className="mr-6 p-2 h-30 w-40" src={logo} alt="Logo" />
       <div>
       <h2 className="text-lg font-bold mb-2">De la Libreria:</h2>
@@ -30,17 +27,12 @@ const Footer = () => {
       </ul>
       </div>
     </div>
-    <div className="w-full p-3 sm:w-1/2 md:w-1/3 lg:w-1/4">
-      <h2 className="text-lg font-bold mb-4">CONTACTO:</h2>
+    <div className="w-full p-3">
+      <h2 className="text-lg text-center font-bold mb-4">CONTACTO:</h2>
     <SocialButon />
-      
-      
     </div>
-    
-  </div>
-
-</div>
-  
+</div>  
 </footer>
-  )}
-  export default Footer;
+
+)}
+export default Footer;

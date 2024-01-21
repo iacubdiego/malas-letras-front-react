@@ -15,48 +15,52 @@ const products = [
   {
     id: 1,
     image: furia_travesti,
-    title: 'LanXPLORER',
-    description: 'In-Line network tester for LAN management with active and passive troubleshooting capabilities for Ethernet connectivity and cabling issues in multi-media environments including copper,fibre and WiFi.',
-    brand: 'Ideal',
-    brandbaner: "{banner_oscilloquartz}",
+    title: 'Furia Travesti',
+    autore: 'Marlene Wayar',
+    price: '$ 5.000',
+    category: 'Adultes'
   },
   {
     id: 2,
     image: estrellada,
-    title: 'Power Meter',
-    description: 'Maximum input 600Vrms and 20Arms. Bandwidth 100KHZ. Voltage, Current, Power, Frequency, Harmonics. USB, GPIB, RS232, LAN remote control.',
-    brand: 'Itech',
-    brandbaner: {furia_travesti},
+    title: 'Estrellada',
+    autore: 'Cinwololo',
+    price: '$ 4.000',
+    category: 'Adultes'
   },
   {
     id: 3,
     image: las_malas,
-    title: 'Signal Generators',
-    description: 'Keysight offers the widest selection of baseband, RF, and microwave signal generator products from baseband to 67 GHz.',
-    brand: 'Keysight',
-    brandbaner: {furia_travesti},
+    title: 'Las Malas',
+    autore: 'Camila Sosa Villada',
+    price: '$ 3.500',
+    category: 'Adultes'
 
   },
   {
     id: 4,
     image: nosotras,
-    title: 'LED High Power DC E-Load',
-    description: 'Simulate real output of LED lights. CR-LED mode. Duty ratio PWM dimming output port. I-pp/I-max. LED driver power dimming test.',
-    brand: 'Keysight',
+    title: 'Nosotras',
+    autore: 'Laura',
+    price: '$ 3.500',
+    category: 'Adultes'
+
   },
   {
     id: 5,
     image: portada_los_dias_se_volvieron,
     title: 'Los dias se volvieron',
-    description: 'Keysight offers the widest selection of baseband, RF, and microwave signal generator products from baseband to 67 GHz.',
-    brand: 'Keysight',
+    autore: 'Nina Ferrari',
+    price: '$ 6.200',
+    category: 'Adultes'
   },
   {
     id: 6,
     image: soy,
     title: 'Soy una tonta por quererte',
-    description: 'Keysight offers the widest selection of baseband, RF, and microwave signal generator products from baseband to 67 GHz.',
-    brand: 'Keysight',
+    autore: 'VVAA',
+    price: '$ 2.700',
+    category: 'Niñeces'
   },
   // {
   //   id: 7,
@@ -69,11 +73,11 @@ const products = [
 ];
 
 const Galeria = () => {
-  const [selectedBrand, setSelectedBrand] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const handleBrandFilter = (brand) => {
-    setSelectedBrand(brand);
+  const handleCategoryFilter = (category) => {
+    setSelectedCategory(category);
   };
 
   const handleSearch = (event) => {
@@ -82,7 +86,7 @@ const Galeria = () => {
 
   const filteredProducts = products.filter((product) => {
     return (
-      (selectedBrand === '' || product.brand === selectedBrand) &&
+      (selectedCategory === '' || product.category === selectedCategory) &&
       (searchTerm === '' ||
         product.title.toLowerCase().includes(searchTerm.toLowerCase()))
     );
@@ -102,14 +106,17 @@ const Galeria = () => {
   </div> */}
   <div className="p-4 flex justify-content items-center mb-4">
     <select
-      onChange={(e) => handleBrandFilter(e.target.value)}
-      value={selectedBrand}
+      onChange={(e) => handleCategoryFilter(e.target.value)}
+      value={selectedCategory}
       className="inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded bg-emerald-500 px-5 text-sm font-medium tracking-wide text-white transition duration-300 hover:bg-emerald-600 focus:bg-emerald-700 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-emerald-300 disabled:bg-emerald-300 disabled:shadow-none"
       // className="border border-gray-300 rounded-md px-4 py-2 mr-2 focus:outline-none focus:border-blue-500"
     >
       <option value="">Todos</option>
-      <option value="Ideal">Ideal</option>
-      <option value="Keysight">Keysight</option>
+      <option value="Adultes">Adultes</option>
+      <option value="Niñeces">Niñeces</option>
+      <option value="Novelas">Novelas</option>
+      <option value="Poesia">Poesia</option>
+
     </select>
     {/* <input
       type="text"
@@ -124,34 +131,42 @@ const Galeria = () => {
     onChange={handleSearch}
     />
   </div>
-  {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"> */}
-  <div class="container px-5 py-10 mx-auto">
+  {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"> */}
+  <div class="container px-2 py-8 mx-auto">
   <div class="flex flex-wrap gap-6 justify-center p-4">
   {filteredProducts.map((product) => (
 
-    <div key={product.id} className="p-2 overflow-hidden rounded bg-white text-slate-500 shadow-md shadow-slate-200 max-w-md mx-auto">
+    <div key={product.id} className="p-2 overflow-hidden rounded bg-white text-slate-500 shadow-md shadow-slate-200 w-[200px] h-[350px] mx-auto">
       <figure className="relative w-full h-0 pb-[100%]">
 
-      <div className="absolute object-cover inset-0 p-4">
+      <div className="absolute object-cover inset-0 p-2">
         <img src={product.image} alt={product.title} className="w-full h-full"/>
       </div>
       </figure>
-      <div className="p-2 pb-0">
-          <header className="flex justify-between">
-            <h3 className="text-xl font-medium text-slate-700">
-              Feminacida
+      <header className="p-2 pb-0 flex flex-col justify-between">
+      <h3 className="text-xl font-medium text-slate-700">
+            {product.title}
             </h3>
-            <p className="p-1 text-xl font-medium text-slate-400"> $8.99</p>
-          </header>
-          <p>
-          Descripcion: Lorem, ipsum dolor sit amet.
-          </p>
-        </div>
-        {/*  <!-- Action base sized basic button --> */}
-        <div className="flex justify-start p-2">
-          <button className="inline-flex h-10 w-1/2 items-center justify-center gap-2 whitespace-nowrap rounded bg-emerald-500 px-5 text-sm font-medium tracking-wide text-white transition duration-300 hover:bg-emerald-600 focus:bg-emerald-700 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-emerald-300 disabled:bg-emerald-300 disabled:shadow-none">
-            <span>Comprar!</span>
+            <p className="hidden md:block">
+            {product.autore}
+            </p>
+        </header>
+        <div className='flex p-2 items-center justify-around'>
+            <p className="text-xl font-medium text-slate-400"> 
+            {product.price}
+            </p>
+        <div className="flex hidden md:block">
+          <button className="inline-flex h-10 items-center gap-2 whitespace-nowrap rounded bg-emerald-500 px-5 text-sm font-medium tracking-wide text-white transition duration-300 hover:bg-emerald-600 focus:bg-emerald-700 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-emerald-300 disabled:bg-emerald-300 disabled:shadow-none">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black-500" viewBox="0 0 20 20" fill="currentColor">
+        <path
+          fillRule="evenodd"
+          d="M6.057 12.057a1 1 0 1 0 1.886.815l.814-3.257h6.879a1 1 0 0 0 .986-.835l2-10A1 1 0 0 0 18 0H4.414L3.6 1.6l-2 10a1 1 0 0 0 .986 1.165h3.47l-.814 3.257a1 1 0 1 0 1.886-.815L6.057 12.057zM5.496 5.6h7.008l-.72 2.88H6.217L5.496 5.6zm9.244-4.8l-1.6 8H3.21l1.6-8h9.93z"
+          clipRule="evenodd"
+        />
+      </svg>
+            {/* <span>Comprar!</span> */}
           </button>
+        </div>
         </div>
     </div>
   ))}
