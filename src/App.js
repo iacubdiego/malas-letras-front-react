@@ -5,6 +5,7 @@ import './globals.css';
 
 import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
+import Books from './pages/Books';
 
 
 import Header from './components/Header';
@@ -22,6 +23,7 @@ function App() {
 
     <Router>
       <Route path="/" component={Home} />
+      <Route path="/products" component={Books} />
       <Route path="/errorpage" component={ErrorPage} />
     </Router>
       {/* Footer */}

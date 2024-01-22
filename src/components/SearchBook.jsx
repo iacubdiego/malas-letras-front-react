@@ -8,8 +8,9 @@ import las_malas from "../images/libros/las_malas.png";
 import nosotras from "../images/libros/nosotras.jpg";
 import portada_los_dias_se_volvieron from "../images/libros/portada_los_dias_se_volvieron.jpg";
 import soy from "../images/libros/soy.png";
-import tapa_mariposas from "../images/libros/tapa_mariposas.jpg";
+// import tapa_mariposas from "../images/libros/tapa_mariposas.jpg";
 
+import productsData from './products.json'; 
 
 const products = [
   {
@@ -94,8 +95,6 @@ const Galeria = () => {
 
   return (
   <div className="container mx-auto">
-    <h1 className="text-4xl font-bold mb-4">Libros</h1>
-
     {/* <div className="relative">
     <img src={furia_travesti} alt="banner_principal" className="w-full rounded-md" />
     <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
@@ -136,37 +135,28 @@ const Galeria = () => {
   <div class="flex flex-wrap gap-6 justify-center p-4">
   {filteredProducts.map((product) => (
 
-    <div key={product.id} className="p-2 overflow-hidden rounded bg-white text-slate-500 shadow-md shadow-slate-200 w-[200px] h-[350px] mx-auto">
+    <div key={product.id} className="p-1/2 overflow-hidden rounded bg-white text-slate-500 shadow-md shadow-slate-200 w-[200px] h-auto mx-auto">
       <figure className="relative w-full h-0 pb-[100%]">
 
       <div className="absolute object-cover inset-0 p-2">
-        <img src={product.image} alt={product.title} className="w-full h-full"/>
+        <img src={product.image} alt={product.title} className="w-full h-full rounded-md shadow-md shadow-slate-200"/>
       </div>
       </figure>
-      <header className="p-2 pb-0 flex flex-col justify-between">
+      <header className="p-1 flex flex-col justify-between">
       <h3 className="text-xl font-medium text-slate-700">
             {product.title}
             </h3>
-            <p className="hidden md:block">
+            <p >
             {product.autore}
             </p>
         </header>
-        <div className='flex p-2 items-center justify-around'>
-            <p className="text-xl font-medium text-slate-400"> 
+        <div className='flex p-1 hidden md:block items-center justify-around'>
+            <p className="text-xl p-1 font-medium text-slate-400"> 
             {product.price}
             </p>
-        <div className="flex hidden md:block">
-          <button className="inline-flex h-10 items-center gap-2 whitespace-nowrap rounded bg-emerald-500 px-5 text-sm font-medium tracking-wide text-white transition duration-300 hover:bg-emerald-600 focus:bg-emerald-700 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-emerald-300 disabled:bg-emerald-300 disabled:shadow-none">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black-500" viewBox="0 0 20 20" fill="currentColor">
-        <path
-          fillRule="evenodd"
-          d="M6.057 12.057a1 1 0 1 0 1.886.815l.814-3.257h6.879a1 1 0 0 0 .986-.835l2-10A1 1 0 0 0 18 0H4.414L3.6 1.6l-2 10a1 1 0 0 0 .986 1.165h3.47l-.814 3.257a1 1 0 1 0 1.886-.815L6.057 12.057zM5.496 5.6h7.008l-.72 2.88H6.217L5.496 5.6zm9.244-4.8l-1.6 8H3.21l1.6-8h9.93z"
-          clipRule="evenodd"
-        />
-      </svg>
-            {/* <span>Comprar!</span> */}
+          <button className="inline-flex p-1 h-8 items-center gap-1 whitespace-nowrap rounded bg-emerald-500 px-5 text-sm font-medium tracking-wide text-white transition duration-300 hover:bg-emerald-600 focus:bg-emerald-700 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-emerald-300 disabled:bg-emerald-300 disabled:shadow-none">
+            <span>Comprar</span>
           </button>
-        </div>
         </div>
     </div>
   ))}
