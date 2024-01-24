@@ -135,7 +135,7 @@ const Galeria = () => {
   <div class="flex flex-wrap gap-6 justify-center p-4">
   {filteredProducts.map((product) => (
 
-    <div key={product.id} className="p-1/2 overflow-hidden rounded bg-white text-slate-500 shadow-md shadow-slate-200 w-[200px] h-auto mx-auto">
+    <div key={product.id} className="p-2 overflow-hidden rounded bg-white text-slate-500 shadow-md shadow-slate-200 w-[150px] h-auto mx-auto">
       <figure className="relative w-full h-0 pb-[100%]">
 
       <div className="absolute object-cover inset-0 p-2">
