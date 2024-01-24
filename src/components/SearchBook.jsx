@@ -8,9 +8,7 @@ import las_malas from "../images/libros/las_malas.png";
 import nosotras from "../images/libros/nosotras.jpg";
 import portada_los_dias_se_volvieron from "../images/libros/portada_los_dias_se_volvieron.jpg";
 import soy from "../images/libros/soy.png";
-// import tapa_mariposas from "../images/libros/tapa_mariposas.jpg";
 
-import productsData from './products.json'; 
 
 const products = [
   {
@@ -75,10 +73,14 @@ const products = [
 
 const Galeria = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedAutore, setSelectedAutore] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleCategoryFilter = (category) => {
     setSelectedCategory(category);
+  };
+  const handleAutoreFilter = (autore) => {
+    setSelectedAutore(autore);
   };
 
   const handleSearch = (event) => {
@@ -87,51 +89,49 @@ const Galeria = () => {
 
   const filteredProducts = products.filter((product) => {
     return (
-      (selectedCategory === '' || product.category === selectedCategory) &&
+      (selectedCategory === '' || product.category === selectedCategory) && (selectedAutore === '' || product.autore === selectedAutore) &&
       (searchTerm === '' ||
         product.title.toLowerCase().includes(searchTerm.toLowerCase()))
     );
   });
 
   return (
-  <div className="container mx-auto">
-    {/* <div className="relative">
-    <img src={furia_travesti} alt="banner_principal" className="w-full rounded-md" />
-    <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
-      <div className="bg-gray-900 bg-opacity-50 backdrop-filter backdrop-blur-lg p-4 rounded-md">
-        <h1 className="text-4xl font-bold text-white mb-4">Keysight</h1>
-      </div>
-    </div>
-  </div> */}
-  <div className="p-4 flex justify-content items-center mb-4">
+  <div className="container p-2 mx-auto">
+  <div className="p-2 flex flex-wrap justify-content items-center mb-2">
+    <Search
+    placeholder="Buscar producto"
+    value={searchTerm}
+    onChange={handleSearch}
+    />
     <select
       onChange={(e) => handleCategoryFilter(e.target.value)}
       value={selectedCategory}
-      className="inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded bg-emerald-500 px-5 text-sm font-medium tracking-wide text-white transition duration-300 hover:bg-emerald-600 focus:bg-emerald-700 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-emerald-300 disabled:bg-emerald-300 disabled:shadow-none"
-      // className="border border-gray-300 rounded-md px-4 py-2 mr-2 focus:outline-none focus:border-blue-500"
+      className="inline-flex mt-3 mx-auto m-2 p-2 h-10 items-center justify-start gap-2 whitespace-nowrap rounded px-5 text-sm font-medium tracking-wide text-white"
+      style={{ backgroundColor: '#b12683' }}
     >
-      <option value="">Todos</option>
+      <option value="">Categoria</option>
       <option value="Adultes">Adultes</option>
       <option value="Niñeces">Niñeces</option>
       <option value="Novelas">Novelas</option>
       <option value="Poesia">Poesia</option>
 
     </select>
-    {/* <input
-      type="text"
-      placeholder="Buscar producto"
-      value={searchTerm}
-      onChange={handleSearch}
-      className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
-    /> */}
-    <Search
-    placeholder="Buscar producto"
-    value={searchTerm}
-    onChange={handleSearch}
-    />
+    <select
+      onChange={(e) => handleAutoreFilter(e.target.value)}
+      value={selectedAutore}
+      className="inline-flex mx-auto mt-3 m-2 p-2 h-10 items-center justify-start gap-2 whitespace-nowrap rounded px-5 text-sm font-medium tracking-wide text-white transition duration-300 hover:bg-emerald-600 focus:bg-emerald-700 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-emerald-300 disabled:bg-emerald-300 disabled:shadow-none"
+      style={{ backgroundColor: '#b12683' }}      // className="border border-gray-300 rounded-md px-4 py-2 mr-2 focus:outline-none focus:border-blue-500"
+    >
+      <option value="">Autoras</option>
+      <option value="Marlene Wayar">Marlene Wayar</option>
+      <option value="Cinwololo">Cinwololo</option>
+      <option value="Camila Sosa Villada">Camila Sosa Villada</option>
+      <option value="Nina Ferrari">Nina Ferrari</option>
+
+    </select>
   </div>
   {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"> */}
-  <div class="container px-2 py-8 mx-auto">
+  <div class="container px-2 py-4 mx-auto">
   <div class="flex flex-wrap gap-6 justify-center p-4">
   {filteredProducts.map((product) => (
 

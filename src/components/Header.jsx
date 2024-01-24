@@ -3,7 +3,7 @@
 import React, { useState } from "react"
 import { Link, Route } from "wouter";
 
-import logo from '../images/Logo-fondo-blanco-malas-letras.png'
+import logo from '../images/Logo_fondo_transparente_malas_letras.png'
 
 export default function Header() {
   const [isToggleOpen, setIsToggleOpen] = useState(false)
@@ -67,7 +67,7 @@ export default function Header() {
               }`}
             >
               <li role="none" className="flex items-stretch">
-              <Link href="/serviciotecnico">
+              <Link href="/products">
                 <a
                   role="menuitem"
                   aria-haspopup="false"
@@ -79,13 +79,13 @@ export default function Header() {
                 </Link>
               </li>
               <li role="none" className="flex items-stretch">
-                <Link href="/consultoría">
+                <Link href="/blog">
                 <a
                   role="menuitem"
                   aria-current="page"
                   aria-haspopup="false"
                   className="flex items-center gap-2 py-4  transition-colors duration-300 hover:text-emerald-600 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
-                  href="#consultoria"
+                  href="#blog"
                 >
                   <span>Blog</span>
                 </a>
@@ -106,14 +106,14 @@ export default function Header() {
               </Link>
               </li>
               <li role="none" className="flex items-stretch">
-              <Link href="/Contactos">
+              <Link href="/Contacto">
                 <a
                   role="menuitem"
                   aria-haspopup="false"
                   className="flex items-center gap-2 py-4 text-emerald-500 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
                   href="#contactos"
                 >
-                  <span>Contactos</span>
+                  <span>Contacto</span>
                 </a>
               </Link>
               </li>
@@ -144,7 +144,7 @@ export default function Header() {
                   />
                 </svg>
                 <span className="absolute -top-1.5 -right-1.5 inline-flex items-center justify-center gap-1 rounded-full border-2 border-white bg-pink-500 px-1.5 text-sm text-white">
-                  2<span className="sr-only"> new emails </span>
+                  2<span className="sr-only"> Libros en Carrito </span>
                 </span>
               </a>
             </div>

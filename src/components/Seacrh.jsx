@@ -4,7 +4,7 @@ export default function Search() {
     
   return (
 
-<div className="max-w-2xl mx-auto w-full">
+<div className="max-w-[600px] mx-auto w-full">
 
 	<form>   
         <label for="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Buscar</label>

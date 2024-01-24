@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../images/Logo-fondo-blanco-malas-letras.png'
+import logo from '../images/Logo_fondo_transparente_malas_letras.png'
 import SocialButon from './SocialButon/SocialButon';
 
 const Footer = () => {
@@ -19,10 +19,10 @@ return (
           <a href="#productos" className="hover:text-gray-400">Libros</a>
         </li>
         <li className="mb-1">
-          <a href="#servicio-tecnico" className="hover:text-gray-400">Blog</a>
+          <a href="#blog" className="hover:text-gray-400">Blog</a>
         </li>
         <li className="mb-1">
-          <a href="#sobre-nosotros" className="hover:text-gray-400">Sobre Malas Letras</a>
+          <a href="#nosotres" className="hover:text-gray-400">Sobre Malas Letras</a>
         </li>
       </ul>
       </div>
