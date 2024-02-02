@@ -2,7 +2,7 @@ import React from "react"
 
 import Carousel from '../../components/Carousel';
 import Blog from '../../components/Blog';
-import SearchBook from '../../components/SearchBook';
+import Galery from '../../components/Galery';
 
 export default function Home() {
     
@@ -10,8 +10,8 @@ export default function Home() {
       <>  
       {/* Carousel */}
       <Carousel />
-      {/* SearchBook */}
-      <SearchBook />
+      {/* Galery */}
+      <Galery />
       {/* Blog */}
       <Blog />
       </>

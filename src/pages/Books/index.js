@@ -1,12 +1,12 @@
 import React from "react"
 
-import SearchBook from '../../components/SearchBook';
+import Galery from '../../components/Galery';
 
 function Books() {
   return (
       <>  
       {/* SearchBook */}
-      <SearchBook />
+      <Galery />
       {/* Galery */}
       {/* <Galery /> */}
       </>

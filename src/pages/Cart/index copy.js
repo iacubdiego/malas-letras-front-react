@@ -1,74 +1,53 @@
-import React from 'react';
-import useProductList from '../../hooks/useProductList';
-import useCartItems from '../../hooks/useCartItems';
+import React, { useState, useEffect } from 'react';
 
 const Cart = () => {
-  const { products } = useProductList([
+  const [cartItems, setCartItems] = useState([]);
+  const [total, setTotal] = useState(0);
+
+  const products = [
     { id: 1, name: 'Product 1', price: 10.99 },
     { id: 2, name: 'Product 2', price: 19.99 },
     { id: 3, name: 'Product 3', price: 5.99 }
-  ]);
-  const { cartItems, addToCart, removeFromCart, resetCart } = useCartItems([]);
+  ];
 
-  // Resto del código...
+  useEffect(() => {
+    const cartItemsFromStorage = JSON.parse(localStorage.getItem('cartItems'));
+    if (cartItemsFromStorage) {
+      setCartItems(cartItemsFromStorage);
+    }
+  }, []);
 
+  useEffect(() => {
+    const calculateTotal = () => {
+      const totalPrice = cartItems.reduce((accumulator, item) => accumulator + item.price, 0);
+      setTotal(totalPrice);
+    };
 
-// const Cart = ({ products }) => {
+    calculateTotal();
+  }, [cartItems]);
 
-//   // Resto del código...
-// };
+  const addToCart = (product) => {
+    const updatedCartItems = [...cartItems, product];
+    setCartItems(updatedCartItems);
+    localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+  };
 
+  const removeFromCart = (product) => {
+    const updatedCartItems = cartItems.filter((item) => item.id !== product.id);
+    setCartItems(updatedCartItems);
+    localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+  };
 
-// import React, { useState, useEffect } from 'react';
+  const checkout = () => {
+    // Lógica para procesar la compra
+    console.log('Checkout');
+  };
 
-// const Cart = () => {
-//   const [cartItems, setCartItems] = useState([]);
-//   const [total, setTotal] = useState(0);
-
-//   const products = [
-//     { id: 1, name: 'Product 1', price: 10.99 },
-//     { id: 2, name: 'Product 2', price: 19.99 },
-//     { id: 3, name: 'Product 3', price: 5.99 }
-//   ];
-
-//   useEffect(() => {
-//     const cartItemsFromStorage = JSON.parse(localStorage.getItem('cartItems'));
-//     if (cartItemsFromStorage) {
-//       setCartItems(cartItemsFromStorage);
-//     }
-//   }, []);
-
-//   useEffect(() => {
-//     const calculateTotal = () => {
-//       const totalPrice = cartItems.reduce((accumulator, item) => accumulator + item.price, 0);
-//       setTotal(totalPrice);
-//     };
-
-//     calculateTotal();
-//   }, [cartItems]);
-
-//   const addToCart = (product) => {
-//     const updatedCartItems = [...cartItems, product];
-//     setCartItems(updatedCartItems);
-//     localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
-//   };
-
-//   const removeFromCart = (product) => {
-//     const updatedCartItems = cartItems.filter((item) => item.id !== product.id);
-//     setCartItems(updatedCartItems);
-//     localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
-//   };
-
-//   const checkout = () => {
-//     // Lógica para procesar la compra
-//     console.log('Checkout');
-//   };
-
-//   const resetCart = () => {
-//     setCartItems([]);
-//     setTotal(0);
-//     localStorage.removeItem('cartItems');
-//   };
+  const resetCart = () => {
+    setCartItems([]);
+    setTotal(0);
+    localStorage.removeItem('cartItems');
+  };
 
   return (
     <div className="flex">
@@ -108,10 +87,10 @@ const Cart = () => {
                 </li>
               ))}
             </ul>
-            {/* <p className="font-bold mt-4">Total: ${total.toFixed(2)}</p> */}
+            <p className="font-bold mt-4">Total: ${total.toFixed(2)}</p>
             <button
               className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded mt-4"
-              // onClick={checkout}
+              onClick={checkout}
             >
               Checkout
             </button>
