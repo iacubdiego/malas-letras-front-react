@@ -28,7 +28,12 @@ const colors = {
   '800': '#0f6157',
   '900': '#124f48',
   '950': '#03302d',
-}, */
+}, 
+
+Sombra
+style={{ boxShadow: '0px 0px 122px 12px rgba(45,255,196,0.81)' }}
+
+*/
 
 body {
   background-image: url('../public/Background_Moon.svg');

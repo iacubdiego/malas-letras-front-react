@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const useCartItems = (initialCartItems) => {
   const [cartItems, setCartItems] = useState(initialCartItems);
-
+  
   useEffect(() => {
     const cartItemsFromStorage = JSON.parse(localStorage.getItem('cartItems'));
     if (cartItemsFromStorage) {
