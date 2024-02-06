@@ -125,9 +125,12 @@ export default function Header() {
               </Link>
               </li>
             </ul>
+
             {/*      <!-- Cart --> */}
             <button
-              className={`relative order-10 block h-10 w-10 self-center
+
+                
+              className={`h-20 max-h-20 lg:max-h-16 w-auto mr-4 relative order-10 block self-center
                 ${
                   isCartOpen
                     ? "visible opacity-100 [&_span:nth-child(1)]:w-6 [&_span:nth-child(1)]:translate-y-0 [&_span:nth-child(1)]:rotate-45 [&_span:nth-child(3)]:w-0 [&_span:nth-child(2)]:-rotate-45 "
