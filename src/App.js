@@ -17,7 +17,7 @@ function App() {
       {/* Content */}
       <Router>
         <Route path="/" component={Home} />
-        <Route path="/products" component={Books} />
+        <Route path="/books" component={Books} />
         <Route path="/errorpage" component={ErrorPage} />
       </Router>
       {/* Footer */}

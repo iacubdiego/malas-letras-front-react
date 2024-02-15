@@ -1,12 +1,13 @@
 import React from "react"
 
 // import Galery from '../../components/Galery';
-import ProductsApi from "../../components/ProductsApi";
+// import ProductsApi from "../../components/ProductsApi";
+import BookList from "../../components/BookList";
 
 function Books() {
   return (
       <>  
-      <ProductsApi/>
+      <BookList/>
       {/* SearchBook */}
       {/* <Galery /> */}
       {/* Galery */}
